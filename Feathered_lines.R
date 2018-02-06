@@ -5,7 +5,7 @@ x2 = seq(1.02 * 2 * pi + pi/2, 4*pi + pi/2, length = 50)
 y2 = tan(x2)
 
 # set graphical parameters
-op = par(bg="burlywood1", mar=rep(.5,4))
+op = par(bg="black", mar=rep(.5,4))
 
 # plot
 plot(c(x1, x2), c(y1, y2), type = "n", ylim = c(-11, 11))
@@ -21,4 +21,4 @@ for (i in seq(-10, 10, length = 100))
 # hsv(h=1,s=1,v=1,alpha ) here h,s & v can lie between 0 to 1
 
 # signature
-legend("bottomright", legend = "© Gaston Sanchez", bty = "n", text.col = "gray70")
+legend("bottomright", legend = "© Kashif", bty = "n", text.col = "gray70")
