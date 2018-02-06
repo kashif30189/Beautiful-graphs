@@ -11,7 +11,6 @@
 # y(t) = exp(-d3*t)* sin(f3t + p3) + exp(-d4*t)*sin(f4t + p4)
 
 library(ggplot2)
-sample(c(2,3),1))
 f1=jitter(sample(c(2,3),1))
 f2=jitter(sample(c(2,3),1))
 f3=jitter(sample(c(2,3),1))
@@ -28,7 +27,7 @@ xt = function(t) exp(-d1*t)*sin(t*f1+p1)+exp(-d2*t)*sin(t*f2+p2)
 yt = function(t) exp(-d3*t)*sin(t*f3+p3)+exp(-d4*t)*sin(t*f4+p4)
 t=seq(1, 100, by=.001)
 dat=data.frame(t=t, x=xt(t), y=yt(t))
-ggplot(dat,aes(xt(t),yt(t))) + geom_path() + ggtitle("Harmonograph") + 
+ggplot(dat,aes(xt(t),yt(t))) + geom_path(color="red") + ggtitle("Harmonograph") + 
   theme_classic() + theme(axis.line = element_blank(),axis.title = element_blank(),
                             axis.ticks = element_blank() )
 
